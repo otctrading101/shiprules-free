@@ -1,0 +1,20 @@
+---
+description: GDScript 2.0 syntax: annotations, await, setters, typing
+globs: **/*.gd
+alwaysApply: false
+---
+# GDScript 2.0 syntax (never Godot 3)
+| Godot 3 (wrong) | Godot 4 (use) |
+|---|---|
+| `export var speed = 5` / `export(int) var` | `@export var speed: float = 5.0` (`@export_range`, `@export_enum`, `@export_group`) |
+| `onready var x = $X` | `@onready var x: Node2D = $X` |
+| `tool` | `@tool` (first line) |
+| `yield(get_tree().create_timer(1), "timeout")` | `await get_tree().create_timer(1.0).timeout` |
+| `yield(obj, "signal")` | `await obj.signal_name` |
+| `var x setget set_x, get_x` | `var x: int:` with `set(value):` / `get:` blocks |
+| `master`/`puppet`/`remote` funcs | `@rpc("any_peer", "call_local")` |
+| `funcref(obj, "m")` | `Callable(obj, "m")` or just `obj.m` |
+| `PoolStringArray`, `PoolVector2Array` | `PackedStringArray`, `PackedVector2Array` |
+- Use static typing everywhere: `var hp: int = 100`, `func hit(dmg: int) -> void:`. Use `:=` for inferred types.
+- Lifecycle overrides (`_ready`, `_process`) no longer call the parent automatically; call `super()` when extending a scripted class.
+- Use `StringName` literals `&"action"` for input actions/groups and `^"path"` NodePaths where it helps.

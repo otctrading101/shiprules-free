@@ -1,0 +1,14 @@
+---
+description: Slash command definition, registration, and interaction responses (3 second rule)
+globs: src/commands/**,**/deploy-commands.*,src/events/**
+alwaysApply: false
+---
+# Slash commands & interactions
+- Define with `SlashCommandBuilder`; names lowercase, 1-32 chars; descriptions required.
+- Register in `deploy-commands.js` via `REST` + `Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID)` while developing, and `Routes.applicationCommands(CLIENT_ID)` for production. NEVER call `rest.put` inside `ClientReady`/startup: it burns rate limits on every restart.
+- **3-second rule:** Discord must get an initial response within 3 seconds or the interaction fails. If the handler awaits ANYTHING slow (DB, HTTP, AI, file I/O), call `await interaction.deferReply()` FIRST, then `editReply()`. The token is then valid for 15 minutes.
+- Respond exactly once initially (`reply` OR `deferReply` OR `deferUpdate`/`update` for components); use `followUp()`/`editReply()` after. Check `interaction.deferred || interaction.replied` in error handlers.
+- Wrap every `execute` in try/catch; on error reply/followUp with an ephemeral message (`flags: MessageFlags.Ephemeral`).
+- Check permissions server-side (`interaction.memberPermissions.has(...)`), and set `setDefaultMemberPermissions` for admin commands. Use `setDMPermission`/contexts as appropriate.
+- Validate user-supplied options (length, URLs, mentions). Use `allowedMentions: { parse: [] }` when echoing user text so the bot can't be used to ping @everyone.
+- Component collectors: always set `time` and a `filter` on the invoking user's id.

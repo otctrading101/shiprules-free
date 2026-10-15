@@ -1,0 +1,10 @@
+---
+description: Null safety for serialized references and Unity objects
+globs: **/*.cs
+alwaysApply: false
+---
+# Null safety
+- Every `[SerializeField]` reference must be validated: `[RequireComponent]` for same-object components, or a check in `Awake`/`OnValidate` that logs a clear error with context (`Debug.LogError($"{name}: _target not assigned", this)`) and disables the component.
+- Do NOT use `?.`, `??`, `??=`, or `is null` on `UnityEngine.Object` types. They bypass Unity's destroyed-object check. Use `== null` / `if (obj)`.
+- `GetComponent` may return null; prefer `TryGetComponent(out T c)`.
+- After `await`/coroutine yields, re-check `this` and targets are not destroyed before using them.

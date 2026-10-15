@@ -1,0 +1,11 @@
+---
+description: Bot token and secret safety
+globs: **/*.js,**/*.ts,**/*.mjs,**/*.cjs,**/*.py,.env*,**/*.json
+alwaysApply: false
+---
+# Token & secret safety
+- The bot token is read ONLY from `process.env.DISCORD_TOKEN` (`os.environ` in Python). Never hardcode it, put it in `config.json`, log it, or send it in a message.
+- `.env` and any `config.json` with secrets are gitignored; commit `.env.example`.
+- If a token was ever committed or pasted publicly, tell the user to reset it in the Developer Portal immediately (Discord also auto-invalidates tokens found in public GitHub repos).
+- Never `eval` user input. No "eval" or "exec" owner commands unless the user explicitly asks, and then locked to the owner's user id.
+- Don't log full interaction payloads (they contain tokens); log ids only.
