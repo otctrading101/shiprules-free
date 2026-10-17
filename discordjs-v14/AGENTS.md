@@ -18,4 +18,4 @@
 - Don't log full interaction payloads (they contain tokens); log ids only.
 
 ---
-Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://otctrader.gumroad.com/l/qitubq
+Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://shiprules.gumroad.com/l/qitubq
