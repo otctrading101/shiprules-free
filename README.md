@@ -24,11 +24,11 @@ Already have an `AGENTS.md` or `CLAUDE.md`? Paste the rules into yours instead o
 ## Want the full packs?
 The free set is 2 rules per stack. The paid **ShipRules** packs add the full rule set (6–7 rules), Copilot instructions, a **zero-dependency scanner** (leaked keys, missing RLS, Godot 3 syntax, obsolete Unity APIs, discord.js v13 code), Claude Code hooks, a CI workflow, reference code and a pre-ship checklist.
 
-- [Ship-Safe SaaS Pack: Next.js + Supabase + Stripe ($15)](https://otctrader.gumroad.com/l/lztkjm)
-- [Unity 6 Agent Pack ($12)](https://otctrader.gumroad.com/l/pegmfk)
-- [Godot 4 Pack: stop AI writing Godot 3 code ($9)](https://otctrader.gumroad.com/l/tawprk)
-- [Discord Bot Pack: discord.js v14 ($9)](https://otctrader.gumroad.com/l/qitubq)
-- [**Bundle: all 4 ($29)**](https://otctrader.gumroad.com/l/qgwqqy)
+- [Ship-Safe SaaS Pack: Next.js + Supabase + Stripe ($15)](https://shiprules.gumroad.com/l/lztkjm)
+- [Unity 6 Agent Pack ($12)](https://shiprules.gumroad.com/l/pegmfk)
+- [Godot 4 Pack: stop AI writing Godot 3 code ($9)](https://shiprules.gumroad.com/l/tawprk)
+- [Discord Bot Pack: discord.js v14 ($9)](https://shiprules.gumroad.com/l/qitubq)
+- [**Bundle: all 4 ($29)**](https://shiprules.gumroad.com/l/qgwqqy)
 
 ## Sources
 Rules were checked against the official docs: Cursor Rules, Claude Code memory, agents.md, the GitHub Copilot custom instructions, the Unity 6 Scripting API, Godot's "Upgrading from Godot 3 to Godot 4" guide and its `renames_map_3_to_4.cpp`, the discord.js v14 guide, and the Discord Gateway docs.

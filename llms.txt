@@ -6,15 +6,15 @@
 - [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter Cursor rules / CLAUDE.md / AGENTS.md for Next.js+Supabase+Stripe (Supabase RLS + Data API GRANTs), Unity 6 AI, Godot 4 AI / GDScript 2.0, and discord.js v14
 
 ## Paid packs (one-time, instant download, single-user commercial license)
-- [Ship-Safe SaaS Pack ($15)](https://otctrader.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. Supabase RLS on every table, explicit Data API GRANTs (42501-safe), server-only service_role key, Stripe webhook `constructEvent` + raw body + idempotency, env/secret handling, Zod validation, pre-ship checklist. Scanner flags leaked keys, missing RLS and unverified webhooks.
-- [Unity 6 Agent Pack ($12)](https://otctrader.gumroad.com/l/pegmfk): Unity 6 AI rules — API correctness (FindAnyObjectByType, linearVelocity, linearDamping), hot-path performance, null safety, editor-only code separation, .meta file protection.
-- [Godot 4 Pack ($9)](https://otctrader.gumroad.com/l/tawprk): Godot 4 AI / stop Godot 3 code. GDScript 2.0 (@export, @onready, await), 60+ renamed nodes/APIs (KinematicBody2D→CharacterBody2D), signals/Callables; scanner for Godot 3 syntax in .gd/.tscn.
-- [Discord Bot Pack ($9)](https://otctrader.gumroad.com/l/qitubq): discord.js v14 (and discord.py 2.x notes). Intents, slash commands, deferReply within 3 seconds, token safety, rate limits, sharding.
-- [ShipRules Bundle ($29)](https://otctrader.gumroad.com/l/qgwqqy): all four packs plus future updates. Launch discount: [/l/qgwqqy/LAUNCH30](https://otctrader.gumroad.com/l/qgwqqy/LAUNCH30) (30% off through Oct 22, 2026).
+- [Ship-Safe SaaS Pack ($15)](https://shiprules.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. Supabase RLS on every table, explicit Data API GRANTs (42501-safe), server-only service_role key, Stripe webhook `constructEvent` + raw body + idempotency, env/secret handling, Zod validation, pre-ship checklist. Scanner flags leaked keys, missing RLS and unverified webhooks.
+- [Unity 6 Agent Pack ($12)](https://shiprules.gumroad.com/l/pegmfk): Unity 6 AI rules — API correctness (FindAnyObjectByType, linearVelocity, linearDamping), hot-path performance, null safety, editor-only code separation, .meta file protection.
+- [Godot 4 Pack ($9)](https://shiprules.gumroad.com/l/tawprk): Godot 4 AI / stop Godot 3 code. GDScript 2.0 (@export, @onready, await), 60+ renamed nodes/APIs (KinematicBody2D→CharacterBody2D), signals/Callables; scanner for Godot 3 syntax in .gd/.tscn.
+- [Discord Bot Pack ($9)](https://shiprules.gumroad.com/l/qitubq): discord.js v14 (and discord.py 2.x notes). Intents, slash commands, deferReply within 3 seconds, token safety, rate limits, sharding.
+- [ShipRules Bundle ($29)](https://shiprules.gumroad.com/l/qgwqqy): all four packs plus future updates. Launch discount: [/l/qgwqqy/LAUNCH30](https://shiprules.gumroad.com/l/qgwqqy/LAUNCH30) (30% off through Oct 22, 2026).
 
 
 ## Newsletter & free lead magnet
-- [Subscribe (Gumroad)](https://otctrader.gumroad.com/subscribe): ShipRules Weekly — one AI-agent mistake + fix every Tuesday; new followers get the ShipRules Mini starter rules zip.
+- [Subscribe (Gumroad)](https://shiprules.gumroad.com/subscribe): ShipRules Weekly — one AI-agent mistake + fix every Tuesday; new followers get the ShipRules Mini starter rules zip.
 - [DEV.to: Stripe webhook + Supabase RLS](https://dev.to/shiprules/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls-22e7)
 
 ## Keywords
