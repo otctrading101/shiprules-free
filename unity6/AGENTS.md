@@ -17,4 +17,4 @@ Use the Unity 6 API, not older tutorials:
 - After `await`/coroutine yields, re-check `this` and targets are not destroyed before using them.
 
 ---
-Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://otctrader.gumroad.com/l/pegmfk
+Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://shiprules.gumroad.com/l/pegmfk
