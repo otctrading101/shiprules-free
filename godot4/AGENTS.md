@@ -30,4 +30,4 @@
 - Prefer signals ("call down, signal up") over `get_parent().get_parent()` chains.
 
 ---
-Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://otctrader.gumroad.com/l/tawprk
+Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://shiprules.gumroad.com/l/tawprk
