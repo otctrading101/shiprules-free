@@ -1,17 +1,25 @@
 # ShipRules
 
-> ShipRules makes rule packs for AI coding agents (Cursor, Claude Code, OpenAI Codex, GitHub Copilot) that stop common AI mistakes in specific stacks. Each pack ships the same rules as Cursor `.mdc` rules, `CLAUDE.md`, `AGENTS.md` and `.github/copilot-instructions.md`, plus a zero-dependency Node.js scanner and optional Claude Code hooks.
+> ShipRules sells AI coding rules packs (.cursorrules / Cursor `.mdc`, CLAUDE.md, AGENTS.md, GitHub Copilot instructions) that stop common AI agent mistakes in specific stacks. Each paid pack ships the same rules in four formats, plus a zero-dependency Node.js scanner and optional Claude Code hooks.
 
 ## Free
-- [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter rules for Next.js+Supabase+Stripe, Unity 6, Godot 4 and discord.js v14
+- [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter Cursor rules / CLAUDE.md / AGENTS.md for Next.js+Supabase+Stripe (Supabase RLS + Data API GRANTs), Unity 6 AI, Godot 4 AI / GDScript 2.0, and discord.js v14
 
 ## Paid packs (one-time, instant download, single-user commercial license)
-- [Ship-Safe SaaS Pack ($15)](https://otctrader.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. RLS on every table, server-only service_role key, Stripe webhook signature verification and idempotency, env/secret handling, Zod validation, pre-ship checklist. The scanner flags leaked keys, missing RLS and unverified webhooks.
-- [Unity 6 Agent Pack ($12)](https://otctrader.gumroad.com/l/pegmfk): Unity 6 API correctness (FindAnyObjectByType, linearVelocity, linearDamping), hot-path performance, null safety, editor-only code separation, .meta file protection.
-- [Godot 4 Pack ($9)](https://otctrader.gumroad.com/l/tawprk): stops AI writing Godot 3 code. GDScript 2.0 (@export, @onready, await), 60+ renamed nodes/APIs (KinematicBody2D→CharacterBody2D), signals/Callables; a scanner for Godot 3 syntax in .gd/.tscn.
-- [Discord Bot Pack ($9)](https://otctrader.gumroad.com/l/qitubq): discord.js v14 (and discord.py 2.x notes). Intents and privileged intents, slash command registration, deferReply within 3 seconds, token safety, rate limits, sharding.
-- [ShipRules Bundle ($29)](https://otctrader.gumroad.com/l/qgwqqy): all four packs plus future updates.
+- [Ship-Safe SaaS Pack ($15)](https://otctrader.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. Supabase RLS on every table, explicit Data API GRANTs (42501-safe), server-only service_role key, Stripe webhook `constructEvent` + raw body + idempotency, env/secret handling, Zod validation, pre-ship checklist. Scanner flags leaked keys, missing RLS and unverified webhooks.
+- [Unity 6 Agent Pack ($12)](https://otctrader.gumroad.com/l/pegmfk): Unity 6 AI rules — API correctness (FindAnyObjectByType, linearVelocity, linearDamping), hot-path performance, null safety, editor-only code separation, .meta file protection.
+- [Godot 4 Pack ($9)](https://otctrader.gumroad.com/l/tawprk): Godot 4 AI / stop Godot 3 code. GDScript 2.0 (@export, @onready, await), 60+ renamed nodes/APIs (KinematicBody2D→CharacterBody2D), signals/Callables; scanner for Godot 3 syntax in .gd/.tscn.
+- [Discord Bot Pack ($9)](https://otctrader.gumroad.com/l/qitubq): discord.js v14 (and discord.py 2.x notes). Intents, slash commands, deferReply within 3 seconds, token safety, rate limits, sharding.
+- [ShipRules Bundle ($29)](https://otctrader.gumroad.com/l/qgwqqy): all four packs plus future updates. Launch discount: [/l/qgwqqy/LAUNCH30](https://otctrader.gumroad.com/l/qgwqqy/LAUNCH30) (30% off through Oct 22, 2026).
+
+
+## Newsletter & free lead magnet
+- [Subscribe (Gumroad)](https://otctrader.gumroad.com/subscribe): ShipRules Weekly — one AI-agent mistake + fix every Tuesday; new followers get the ShipRules Mini starter rules zip.
+- [DEV.to: Stripe webhook + Supabase RLS](https://dev.to/shiprules/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls-22e7)
+
+## Keywords
+cursor rules, .cursorrules, .mdc, CLAUDE.md, AGENTS.md, copilot-instructions, Supabase RLS, Supabase Data API GRANT, Stripe webhook constructEvent, Stripe webhook verification, Unity 6 AI, Godot 4 AI, GDScript 2.0, discord.js v14, vibe coding security
 
 ## Notes
-- Formats were checked against the official Cursor, Claude Code, agents.md and GitHub Copilot docs, and engine facts against the Unity 6, Godot 4.7 and discord.js docs (October 2026).
-- The scanners are heuristic safety nets, not compilers or security audits.
+- Formats checked against the official Cursor, Claude Code, agents.md and GitHub Copilot docs, and engine facts against Unity 6, Godot 4.7 and discord.js docs (re-checked October 16, 2026).
+- Scanners are heuristic safety nets, not compilers or security audits.
