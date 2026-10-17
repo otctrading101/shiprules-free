@@ -2,6 +2,11 @@
 
 ## Supabase auth & RLS
 - Every table in `public` gets `alter table ... enable row level security;` in the SAME migration that creates it, plus explicit policies. No table ships without RLS.
+- **Data API grants (required from Oct 30, 2026 on existing projects; already default on new projects):** new tables in `public` are NOT exposed to the Data API (`supabase-js` / PostgREST) until you `GRANT` privileges. Missing grants return Postgres error `42501` ("permission denied for table …"). In the same migration as `CREATE TABLE` + RLS:
+  - Grant least privilege: e.g. `GRANT SELECT, INSERT, UPDATE, DELETE ON public.your_table TO authenticated;`
+  - Grant to `anon` ONLY when the table is truly public, and only the verbs you need (usually `SELECT`); never `GRANT ALL` to `anon`.
+  - Grant to `service_role` only for tables server/webhook code must write (still keep RLS on; service_role bypasses RLS).
+  - Do not rely on default privileges; make grants explicit and reviewable in migrations.
 - Policies use `(select auth.uid())` and scope by owner column, e.g. `using ((select auth.uid()) = user_id)`. Add `with check` on insert/update.
 - Never write `using (true)` on writable tables. Public read tables must be read-only (`for select`).
 - Users must not be able to update billing columns (plan, stripe_customer_id, subscription_status). Put these in a separate table only writable by the service role (webhook).
