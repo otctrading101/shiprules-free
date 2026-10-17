@@ -23,4 +23,4 @@
 - If a secret was ever committed, tell the user to rotate it; deleting the line is not enough.
 
 ---
-Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://otctrader.gumroad.com/l/lztkjm
+Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://shiprules.gumroad.com/l/lztkjm
