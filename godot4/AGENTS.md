@@ -9,7 +9,11 @@
 | `yield(get_tree().create_timer(1), "timeout")` | `await get_tree().create_timer(1.0).timeout` |
 | `yield(obj, "signal")` | `await obj.signal_name` |
 | `var x setget set_x, get_x` | `var x: int:` with `set(value):` / `get:` blocks |
-| `master`/`puppet`/`remote` funcs | `@rpc("any_peer", "call_local")` |
+| `puppet` funcs | `@rpc` (authority-only; Godot 4 default) |
+| `remote` funcs | `@rpc("any_peer")` |
+| `remotesync` funcs | `@rpc("any_peer", "call_local")` |
+| `puppetsync` funcs | `@rpc("call_local")` |
+| `master` funcs | no direct map; use `@rpc("any_peer")` + `multiplayer.get_remote_sender_id()` check |
 | `funcref(obj, "m")` | `Callable(obj, "m")` or just `obj.m` |
 | `PoolStringArray`, `PoolVector2Array` | `PackedStringArray`, `PackedVector2Array` |
 - Use static typing everywhere: `var hp: int = 100`, `func hit(dmg: int) -> void:`. Use `:=` for inferred types.
