@@ -15,6 +15,13 @@
 - Check authorization in every Server Action and route handler, not only in middleware or the UI.
 - Storage buckets: private by default, with RLS policies on `storage.objects`.
 
+## Stripe webhooks
+- The success/redirect page NEVER grants access. Only the verified webhook updates plan or entitlement.
+- Webhook route (`app/api/stripe/webhook/route.ts`): `export const runtime = "nodejs"`; read the raw body with `await req.text()`. Never call `req.json()` before verification: signatures are computed over the exact raw bytes.
+- Verify with `stripe.webhooks.constructEvent(body, req.headers.get("stripe-signature")!, process.env.STRIPE_WEBHOOK_SECRET!)`.
+- Fail closed: on a verification error return 400. Never catch-and-continue, log-and-continue, or skip verification "in dev".
+- Idempotency: Stripe retries, so the same event can arrive more than once. Record `event.id` (unique constraint) before side effects; if it already exists, return 200 and skip.
+
 ## Env & secrets
 - Only values safe for the public get `NEXT_PUBLIC_`: Supabase URL, anon/publishable key, Stripe publishable key, site URL. Everything else is server-only.
 - Never hardcode keys (`sk_live_`, `sk_test_`, `whsec_`, service-role JWTs) in code, tests, or docs. Read from `process.env` via `lib/env.ts` (Zod-validated, fails fast at boot).

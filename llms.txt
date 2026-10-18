@@ -3,7 +3,7 @@
 > ShipRules sells AI coding rules packs (.cursorrules / Cursor `.mdc`, CLAUDE.md, AGENTS.md, GitHub Copilot instructions) that stop common AI agent mistakes in specific stacks. Each paid pack ships the same rules in four formats, plus a zero-dependency Node.js scanner and optional Claude Code hooks.
 
 ## Free
-- [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter Cursor rules / CLAUDE.md / AGENTS.md for Next.js+Supabase+Stripe (Supabase RLS + Data API GRANTs), Unity 6 AI, Godot 4 AI / GDScript 2.0, and discord.js v14
+- [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter Cursor rules / CLAUDE.md / AGENTS.md for Next.js+Supabase+Stripe (Supabase RLS + Data API GRANTs + Stripe webhook raw-body verification), Unity 6 AI, Godot 4 AI / GDScript 2.0, and discord.js v14
 
 ## Paid packs (one-time, instant download, single-user commercial license)
 - [Ship-Safe SaaS Pack ($15)](https://shiprules.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. Supabase RLS on every table, explicit Data API GRANTs (42501-safe), server-only service_role key, Stripe webhook `constructEvent` + raw body + idempotency, env/secret handling, Zod validation, pre-ship checklist. Scanner flags leaked keys, missing RLS and unverified webhooks.
