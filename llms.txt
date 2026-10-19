@@ -4,6 +4,7 @@
 
 ## Free
 - [shiprules-free](https://github.com/otctrading101/shiprules-free): MIT starter Cursor rules / CLAUDE.md / AGENTS.md for Next.js+Supabase+Stripe (Supabase RLS + Data API GRANTs + Stripe webhook raw-body verification), Unity 6 AI, Godot 4 AI / GDScript 2.0, and discord.js v14
+- [cursor.directory listing](https://cursor.directory/plugins/shiprules-free-supabase-rls-stripe-webhook-godot-4-unity-6-discordjs-guardrails): the free rules as one-click "Add to Cursor" entries
 
 ## Paid packs (one-time, instant download, single-user commercial license)
 - [Ship-Safe SaaS Pack ($15)](https://shiprules.gumroad.com/l/lztkjm): Next.js App Router + Supabase + Stripe. Supabase RLS on every table, explicit Data API GRANTs (42501-safe), server-only service_role key, Stripe webhook `constructEvent` + raw body + idempotency, env/secret handling, Zod validation, pre-ship checklist. Scanner flags leaked keys, missing RLS and unverified webhooks.
@@ -16,6 +17,7 @@
 ## Newsletter & free lead magnet
 - [Subscribe (Gumroad)](https://shiprules.gumroad.com/subscribe): ShipRules Weekly — one AI-agent mistake + fix every Tuesday; new followers get the ShipRules Mini starter rules zip.
 - [DEV.to: Stripe webhook + Supabase RLS](https://dev.to/shiprules/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls-22e7)
+- [Hashnode cross-post (canonical: DEV.to)](https://shiprules.hashnode.dev/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls)
 
 ## Keywords
 cursor rules, .cursorrules, .mdc, CLAUDE.md, AGENTS.md, copilot-instructions, Supabase RLS, Supabase Data API GRANT, Stripe webhook constructEvent, Stripe webhook verification, Unity 6 AI, Godot 4 AI, GDScript 2.0, discord.js v14, vibe coding security
