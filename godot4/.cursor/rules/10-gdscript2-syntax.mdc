@@ -16,7 +16,7 @@ alwaysApply: false
 | `remote` funcs | `@rpc("any_peer")` |
 | `remotesync` funcs | `@rpc("any_peer", "call_local")` |
 | `puppetsync` funcs | `@rpc("call_local")` |
-| `master` funcs | no direct map; use `@rpc("any_peer")` + `multiplayer.get_remote_sender_id()` check |
+| `master` funcs | no direct map; use `@rpc("any_peer")`, guard receivers with `is_multiplayer_authority()`, and validate `multiplayer.get_remote_sender_id()` against allowed callers |
 | `funcref(obj, "m")` | `Callable(obj, "m")` or just `obj.m` |
 | `PoolStringArray`, `PoolVector2Array` | `PackedStringArray`, `PackedVector2Array` |
 - Use static typing everywhere: `var hp: int = 100`, `func hit(dmg: int) -> void:`. Use `:=` for inferred types.
