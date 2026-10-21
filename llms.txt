@@ -17,11 +17,12 @@
 ## Newsletter & free lead magnet
 - [Subscribe (Gumroad)](https://shiprules.gumroad.com/subscribe): ShipRules Weekly — one AI-agent mistake + fix every Tuesday; new followers get the ShipRules Mini starter rules zip.
 - [DEV.to: Stripe webhook + Supabase RLS](https://dev.to/shiprules/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls-22e7)
+- [DEV.to: Claude Code Stop hook that blocks "done" until tests pass](https://dev.to/shiprules/your-ai-agent-says-done-your-tests-say-3-failing-the-stop-hook-that-settles-it-29df)
 - [Hashnode cross-post (canonical: DEV.to)](https://shiprules.hashnode.dev/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls)
 - [Medium cross-post (canonical: DEV.to)](https://medium.com/@otctrading101/your-ai-agent-is-lying-about-your-stripe-webhook-and-your-supabase-rls-363a9deee537)
 
 ## Keywords
-cursor rules, .cursorrules, .mdc, CLAUDE.md, AGENTS.md, copilot-instructions, Supabase RLS, Supabase Data API GRANT, Stripe webhook constructEvent, Stripe webhook verification, Unity 6 AI, Godot 4 AI, GDScript 2.0, discord.js v14, vibe coding security
+cursor rules, .cursorrules, .mdc, CLAUDE.md, AGENTS.md, copilot-instructions, Supabase RLS, Supabase Data API GRANT, Stripe webhook constructEvent, Stripe webhook verification, Unity 6 AI, Godot 4 AI, GDScript 2.0, discord.js v14, vibe coding security, Claude Code Stop hook, stop_hook_active
 
 ## Notes
 - Formats checked against the official Cursor, Claude Code, agents.md and GitHub Copilot docs, and engine facts against Unity 6, Godot 4.7 and discord.js docs (re-checked October 16, 2026).
