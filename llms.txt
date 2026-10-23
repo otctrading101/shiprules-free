@@ -11,7 +11,7 @@
 - [Unity 6 Agent Pack ($12)](https://shiprules.gumroad.com/l/pegmfk): Unity 6 AI rules — API correctness (FindAnyObjectByType, linearVelocity, linearDamping), hot-path performance, null safety, editor-only code separation, .meta file protection.
 - [Godot 4 Pack ($9)](https://shiprules.gumroad.com/l/tawprk): Godot 4 AI / stop Godot 3 code. GDScript 2.0 (@export, @onready, await), 60+ renamed nodes/APIs (KinematicBody2D→CharacterBody2D), signals/Callables; scanner for Godot 3 syntax in .gd/.tscn.
 - [Discord Bot Pack ($9)](https://shiprules.gumroad.com/l/qitubq): discord.js v14 (and discord.py 2.x notes). Intents, slash commands, deferReply within 3 seconds, token safety, rate limits, sharding.
-- [ShipRules Bundle ($29)](https://shiprules.gumroad.com/l/qgwqqy): all four packs plus future updates. Launch discount: [/l/qgwqqy/LAUNCH30](https://shiprules.gumroad.com/l/qgwqqy/LAUNCH30) (30% off through Oct 22, 2026).
+- [ShipRules Bundle ($29)](https://shiprules.gumroad.com/l/qgwqqy): all four packs plus future updates.
 
 
 ## Newsletter & free lead magnet
