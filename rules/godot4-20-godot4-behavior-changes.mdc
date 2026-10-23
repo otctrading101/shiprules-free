@@ -1,0 +1,17 @@
+---
+description: Godot 3 habits that still parse in Godot 4 but behave differently (super(), slice, zoom, call_group, randomize)
+globs: **/*.gd
+alwaysApply: false
+---
+# Behavior that changed silently between Godot 3 and 4 (no parse error)
+Source: Godot docs, "Upgrading from Godot 3 to Godot 4" > "Updating scripts to take backwards-incompatible changes into account".
+- Lifecycle overrides (`_ready`, `_process`, `_physics_process`, `_enter_tree`) no longer call the parent automatically. When extending a scripted class, call `super()` first unless you intend to replace the parent's logic.
+- `Array.slice(begin, end)`: `end` is exclusive. `[1, 2, 3].slice(0, 1)` is `[1]`.
+- `Camera2D.zoom`: higher values zoom in. `Vector2(2, 2)` is 2x closer, not farther.
+- `String.right(n)` returns the last `n` characters. For "everything from position i", use `substr(i)`.
+- `call_group()`, `set_group()`, `notify_group()` are immediate. For heavy work on large groups use `call_group_flags(SceneTree.GROUP_CALL_DEFERRED, ...)`.
+- `randomize()` already runs on project load. For deterministic runs (seeded levels, replays, tests) set a seed explicitly; don't rely on "not calling randomize()".
+- `ResourceSaver.save(resource, path)`: resource first, path second.
+- `button.pressed` is a Signal. Read the toggle state from `button_pressed`.
+- `Array.remove(i)` is `remove_at(i)`; `empty()` is `is_empty()`; `invert()` is `reverse()`.
+- If unsure whether an API exists or behaves the same in Godot 4, say so and check the Godot 4 class reference instead of answering from Godot 3 memory.

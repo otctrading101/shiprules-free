@@ -29,5 +29,19 @@
 - Use lambdas for small handlers: `timer.timeout.connect(func(): queue_free())`.
 - Prefer signals ("call down, signal up") over `get_parent().get_parent()` chains.
 
+## Behavior that changed silently (no parse error)
+- Lifecycle overrides (`_ready`, `_process`, `_physics_process`, `_enter_tree`) no longer call the parent automatically. When extending a scripted class, call `super()` first unless you intend to replace the parent's logic.
+- `Array.slice(begin, end)`: `end` is exclusive. `[1, 2, 3].slice(0, 1)` is `[1]`.
+- `Camera2D.zoom`: higher values zoom in.
+- `String.right(n)` returns the last `n` characters; use `substr(i)` for "from position i".
+- `call_group()` is immediate; use `call_group_flags(SceneTree.GROUP_CALL_DEFERRED, ...)` for heavy work.
+- `randomize()` already runs on project load; set a seed explicitly for deterministic runs.
+- `ResourceSaver.save(resource, path)`: resource first.
+- `button.pressed` is a Signal; read toggle state from `button_pressed`.
+- If unsure whether an API exists or behaves the same in Godot 4, say so instead of answering from Godot 3 memory.
+
+## Check
+- Before saying a task is done, run `bash scripts/check-godot3.sh .` and fix anything it reports.
+
 ---
 Free ShipRules starter rules (MIT). Full pack with more rules, a scanner, hooks and a checklist: https://shiprules.gumroad.com/l/tawprk

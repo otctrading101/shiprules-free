@@ -14,7 +14,7 @@ Plain Markdown rules, no install, no dependencies, MIT. Copy one folder into you
 | Stack | Mistakes the rules forbid | Folder |
 |---|---|---|
 | **Next.js + Supabase + Stripe** | Tables with no **Row Level Security**, `using (true)` on writable tables, `service_role` key in client code or `NEXT_PUBLIC_`, missing Data API `GRANT`s (error `42501`), Stripe webhooks parsed with `req.json()` before `constructEvent`, catch-and-continue on bad signatures, no `event.id` idempotency, hardcoded `sk_live_` / `whsec_` keys | [`nextjs-supabase-stripe/`](nextjs-supabase-stripe) (3 rules) |
-| **Godot 4** | **Godot 3 code** in Godot 4 projects: `yield`, `export var`, `onready`, `setget`, `connect("sig", self, "m")`, `puppet`/`remote` RPCs, `PoolStringArray` | [`godot4/`](godot4) (2 rules) |
+| **Godot 4** | **Godot 3 code** in Godot 4 projects: `yield`, `export var`, `onready`, `setget`, `connect("sig", self, "m")`, `puppet`/`remote` RPCs, `PoolStringArray`. Plus the Godot 3 habits that still compile and misbehave: missing `super()` in `_ready()`, exclusive `slice()`, inverted `Camera2D.zoom` | [`godot4/`](godot4) (3 rules + `scripts/check-godot3.sh`) |
 | **Unity 6** | Obsolete APIs (`FindObjectOfType`, `rb.velocity`, `drag`), `?.` / `??` on Unity objects, unchecked `[SerializeField]` refs | [`unity6/`](unity6) (2 rules) |
 | **discord.js v14** | "The application did not respond" (missed 3-second `deferReply`), `rest.put` on every startup, hardcoded bot tokens, `@everyone` pings from echoed user text | [`discordjs-v14/`](discordjs-v14) (2 rules) |
 
@@ -65,6 +65,12 @@ create policy "own row" on profiles for select using ((select auth.uid()) = id);
 
 And Godot 4 (from [`10-gdscript2-syntax.mdc`](godot4/.cursor/rules/10-gdscript2-syntax.mdc)): `yield(get_tree().create_timer(1), "timeout")` becomes `await get_tree().create_timer(1.0).timeout`, `export var speed = 5` becomes `@export var speed: float = 5.0`.
 
+Godot 4 projects also get [`scripts/check-godot3.sh`](godot4/scripts/check-godot3.sh), a zero-dependency check that exits 1 if any `.gd` file contains Godot 3 syntax. Run it in CI or as a Claude Code Stop hook:
+
+```bash
+bash scripts/check-godot3.sh .   # prints offending lines, exit 1 on Godot 3 syntax
+```
+
 ## Install (30 seconds)
 
 ```bash
@@ -98,7 +104,7 @@ Caught your agent making a mistake these rules miss? Open an issue with the bad 
 
 ## Want the full packs?
 
-The free set is 2–3 rules per stack. The paid ShipRules packs (one-time purchase) add the full rule set (6–7 rules per stack), Copilot instructions, a zero-dependency scanner (leaked keys, missing RLS, unverified webhooks, Godot 3 syntax, obsolete Unity APIs, discord.js v13 code), Claude Code hooks, a CI workflow, reference code and a pre-ship checklist: [shiprules.gumroad.com](https://shiprules.gumroad.com).
+The free set is 2–3 rules per stack (plus the Godot 3 syntax check). The paid ShipRules packs (one-time purchase) add the full rule set (6–7 rules per stack), Copilot instructions, a zero-dependency scanner (leaked keys, missing RLS, unverified webhooks, Godot 3 syntax, obsolete Unity APIs, discord.js v13 code), Claude Code hooks, a CI workflow, reference code and a pre-ship checklist: [shiprules.gumroad.com](https://shiprules.gumroad.com).
 
 ## License
 
